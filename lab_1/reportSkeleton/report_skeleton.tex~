@@ -1,0 +1,108 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{setspace}
+\usepackage{subfigure}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage{bm}
+\usepackage[english]{babel}
+\usepackage{multirow}
+\usepackage{enumitem}
+\newcommand{\cno}{C/N_0}
+\newcommand{\ccoh}{C_{\textrm{coh}}}
+\newcommand{\tcoh}{T_{\textrm{coh}}}
+
+\title{ASE 379L Laboratory \#N Report \\ Simulating Quadrotor Dynamics}
+\author{Susan Burling Ward} \date{October 29, 20XX}
+
+\begin{document}
+%\onehalfspace
+\maketitle
+\section{Abstract} [The abstract is a summary of the whole report.  Out of
+respect for our busy readers, it gets right to the point.  The first 2-3
+sentences unpack the title and motivate the report.  The remainder briefly
+offers context (if necessary) and further describes the reports's method and
+main results.]
+
+A high-fidelity quadrotor dynamics simulator was designed from the theory of
+Newtonian dynamics and then implemented in Matlab code ...
+
+\section{Introduction}
+Quadrotor motion can be described by a combination of linear and attitude
+dynamics and certain linear motion and attitude kinematics relationships.  The
+governing equations for a simplified simulator can be found in
+\cite{mellinger2012trajectory}.  However, a high-fidelity simulator must
+account for effects that \cite{mellinger2012trajectory} ignores ...
+
+\section{Theoretical Development} [Put here any theoretical development (e.g.,
+modeling) required to answer the questions posed in the lab assignment.  Then
+proceed to answer the theoretical questions from the lab---those that do no
+depend on experimental results.]
+
+\section{Implementation} [Describe here your basic implementation strategy and
+any non-obvious implementation aspects.  Include snippets of your code
+here to illustrate its features.  Put the complete code in an Appendix to the
+lab report.]
+
+\section{Results and Analysis}
+[Perform all tests and experiments requested by the lab, and analyze the results of
+these experiments.]
+
+The {\tt simulateQuadrotorDynamics} function was run on the three input
+structures {\tt Stest} provided.  The simulated attitude and position of the
+quad for each of these is shown in Figs. \ref{fig:sca} and
+\ref{fig:utdata}. ...
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.4\textwidth]{figs/sca2.eps}
+\end{center}
+\caption{Quad attitude expressed as a time series of Euler angles.}
+\label{fig:sca}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}$
+\begin{array}{ccc}\hspace{-5em}
+ \includegraphics[width=0.4\textwidth]{figs/sky1.eps} &
+ \includegraphics[width=0.4\textwidth]{figs/sky2.eps}
+\end{array}$
+\end{center}
+\caption{[Figure caption here]}
+\label{fig:utdata}
+\end{figure}
+
+Table \ref{tab:DOP} below shows... 
+
+\begin{table}[h!]
+\begin{center}
+    \begin{tabular}{ | l | l |l|}
+    \hline
+    DOP Value& Cornell (meters)& UT (meters)\\\hline
+GDOP&1.3069&2.0799\\\hline
+PDOP& 1.2046&1.8276\\\hline
+TDOP&0.5069&0.9929\\\hline
+HDOP&0.6776& 0.8849\\\hline
+VDOP&0.9959&1.5990\\
+    \hline
+    \end{tabular}
+\caption{[Table caption here.]}
+\label{tab:DOP}
+\end{center}
+\end{table}
+
+Analyze results here...
+
+\section{Conclusion}
+A coarse navigation solution was computed on pseudorange data downloaded from
+the Generalized Radionavigation Interfusion Device (GRID)....
+
+\bibliographystyle{ieeetr}
+\bibliography{./pangea}  
+\end{document}

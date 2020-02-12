@@ -1,0 +1,5 @@
+all:
+	latex humphreys_guide.tex; bibtex humphreys_guide.aux; latex humphreys_guide.tex; latex humphreys_guide.tex; dvips -t letter humphreys_guide.dvi; ps2pdf humphreys_guide.ps
+
+clean:
+	rm -f *.aux *.bbl *.log *.blg *.dvi *.ps *.out
